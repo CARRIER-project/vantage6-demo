@@ -29,6 +29,7 @@ application:
   # components.
   # OPTIONAL
   images:
+    node: harbor2.vantage6.ai/infrastructure/node:3.7.0
 
   # path or endpoint to the local data source. The client can request a
   # certain database to be used if it is specified here. They are
