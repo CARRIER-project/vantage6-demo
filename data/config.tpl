@@ -9,8 +9,6 @@ application:
   # port the server listens to
   port: 443
 
-  # API path prefix that the server uses. Usually '/api' or an empty string
-  api_path: ''
 
   # subnet of the VPN server
   vpn_subnet: 10.76.0.0/16
