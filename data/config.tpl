@@ -54,25 +54,25 @@ application:
 
   # Settings for the logger
   logging:
-      # Controls the logging output level. Could be one of the following
-      # levels: CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
-      level:        DEBUG
+    # Controls the logging output level. Could be one of the following
+    # levels: CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
+    level: DEBUG
 
-      # Filename of the log-file, used by RotatingFileHandler
-      file:         ${NODE}.log
+    # Filename of the log-file, used by RotatingFileHandler
+    file: ${NODE}.log
 
-      # whenever the output needs to be shown in the console
-      use_console:  True
+    # whenever the output needs to be shown in the console
+    use_console: True
 
-      # The number of log files that are kept, used by RotatingFileHandler
-      backup_count: 5
+    # The number of log files that are kept, used by RotatingFileHandler
+    backup_count: 5
 
-      # Size kb of a single log file, used by RotatingFileHandler
-      max_size:     1024
+    # Size kb of a single log file, used by RotatingFileHandler
+    max_size: 1024
 
-      # format: input for logging.Formatter,
-      format:       "%(asctime)s - %(name)-14s - %(levelname)-8s - %(message)s"
-      datefmt:      "%Y-%m-%d %H:%M:%S"
+    # format: input for logging.Formatter,
+    format: "%(asctime)s - %(name)-14s - %(levelname)-8s - %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
 
   # directory where local task files (input/output) are stored
   task_dir: ${HOME}/.local/share/vantage6/node/${NODE}
