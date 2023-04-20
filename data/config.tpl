@@ -43,9 +43,6 @@ application:
     # node belongs.
     enabled: false
 
-    # location to the private key file
-    private_key: ''
-
   # To control which algorithms are allowed at the node you can set
   # the allowed_images key. This is expected to be a valid regular
   # expression
