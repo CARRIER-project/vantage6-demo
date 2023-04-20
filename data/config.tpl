@@ -13,6 +13,8 @@ application:
   # subnet of the VPN server
   vpn_subnet: 10.76.0.0/16
 
+  api_path: "/api"
+
   # add additional environment variables to the algorithm containers.
   # this could be usefull for passwords or other things that algorithms
   # need to know about the node it is running on
