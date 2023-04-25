@@ -229,7 +229,7 @@ var datalabel = document.getElementById("datalabel");
 
 function WriteData(){
     var request = new XMLHttpRequest()
-    request.open('GET', 'update?data1='+data1output.innerHTML+'&&data2='+data2output.innerHTML+'&&data3='+data3output.innerHTML+'&&label='+datalabel.innerHTML)
+    request.open('GET', '/update?data1='+data1output.innerHTML+'&&data2='+data2output.innerHTML+'&&data3='+data3output.innerHTML+'&&label='+datalabel.innerHTML)
     request.send()
 }
 
