@@ -1,0 +1,39 @@
+- name: Install demo
+  hosts: all
+  become_flags: -E
+  vars:
+    - demo_dir: ~/vantage6-demo-ansible
+
+  tasks:
+    - name: Stop demo if it's already installed and running
+      command: "sh {{demo_dir}}/scripts/stop.sh"
+      become: yes
+      ignore_errors: yes
+
+    - name: Get homedir
+      command: "echo $HOME"
+      register: homedir
+
+    - name: Make demo dir
+      file:
+        path: "{{ demo_dir }}"
+        state: directory
+    - name: Copy scripts
+      copy:
+        src: ../scripts/
+        dest: "{{ demo_dir }}/scripts"
+
+    - name: Install dependencies
+      become: yes
+      command: "sh {{demo_dir}}/scripts/install.sh"
+
+    - name: Configure the node
+      template:
+        src: ../data/config.tpl
+        dest: ~/.config/vantage6/node/demo.yaml
+        force: yes
+
+    - name: Copy data
+      copy:
+        src: ../data/data.csv
+        dest: ~/data.csv
