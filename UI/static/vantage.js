@@ -10,7 +10,7 @@ function StartDemo() {
     var request = new XMLHttpRequest()
     request.open(
         'POST',
-        'https://petronas.vantage6.ai/token/user'
+        V6_SERVER_BASE + '/token/user'
     )
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify({ "username": USERNAME, "password": PASSWORD}));
@@ -31,7 +31,7 @@ function MakeComputationRequest(token) {
     var request = new XMLHttpRequest()
     request.open(
         "POST",
-        "https://petronas.vantage6.ai/task"
+        V6_SERVER_BASE + "/task"
     )
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader('Authorization', 'Bearer ' + token);
@@ -102,13 +102,13 @@ function MakeComputationRequest(token) {
     request.send(
         JSON.stringify(
             {
-                "image": "harbor2.vantage6.ai/demo/health-ri-demo-arm",
-                "collaboration_id": 8,
+                "image": IMAGE,
+                "collaboration_id": COLLABORATION,
                 "name": 'health-ri-demo',
                 "description": 'health-ri-demo',
                 "organizations": [
                     {
-                        "id": 22,
+                        "id": ORGANIZATION,
                         "input": input_encoded
                     }
                 ],
@@ -132,7 +132,7 @@ function PollResults(result_id, token) {
 
     request.open(
         "GET",
-        "https://petronas.vantage6.ai/result/" + result_id.toString()
+        V6_SERVER_BASE + "/result/" + result_id.toString()
     )
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader('Authorization', 'Bearer ' + token);

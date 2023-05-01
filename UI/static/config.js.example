@@ -1,0 +1,4 @@
+var USERNAME="xxx"
+var PASSWORD="xxx"
+var V6_SERVER_BASE = "https://petronas.vantage6.ai"
+var IMAGE = "harbor2.vantage6.ai/demo/health-ri-demo-arm"
