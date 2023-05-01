@@ -1,0 +1,11 @@
+- name: Start demo
+  hosts: all
+  become_flags: -E
+  vars:
+    - demo_dir: ~/vantage6-demo-ansible
+
+  tasks:
+    - name: Start demo
+      command: "sh {{demo_dir}}/scripts/start.sh"
+      become: yes
+

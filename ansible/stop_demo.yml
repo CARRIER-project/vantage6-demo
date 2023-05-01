@@ -1,0 +1,11 @@
+- name: Stop demo
+  hosts: all
+  become_flags: -E
+  vars:
+    - demo_dir: ~/vantage6-demo-ansible
+
+  tasks:
+    - name: Stop demo if it's already installed and running
+      command: "sh {{demo_dir}}/scripts/stop.sh"
+      become: yes
+

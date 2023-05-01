@@ -1,10 +1,10 @@
 application:
 
   # API key used to authenticate at the server.
-  api_key: ${API_KEY}
+  api_key: "{{api_key}}"
 
   # URL of the vantage6 server
-  server_url: ${V6_SERVER_URL}
+  server_url: "{{v6_server}}"
 
   # port the server listens to
   port: 443
@@ -24,7 +24,7 @@ application:
 
     # in this example the environment variable 'player' has
     # the value 'Alice' inside the algorithm container
-    player: ${NODE}
+    player: "{{name}}"
 
   # specify custom Docker images to use for starting the different
   # components.
@@ -36,7 +36,7 @@ application:
   # certain database to be used if it is specified here. They are
   # specified as label:local_path pairs.
   databases:
-    default: ${HOME}/data.csv
+    default: "{{homedir.stdout}}/data.csv"
 
   # end-to-end encryption settings
   encryption:
@@ -75,4 +75,4 @@ application:
     datefmt: "%Y-%m-%d %H:%M:%S"
 
   # directory where local task files (input/output) are stored
-  task_dir: ${HOME}/.local/share/vantage6/node/${NODE}
+  task_dir: "{{homedir.stdout}}/.local/share/vantage6/node/{{name}}"
