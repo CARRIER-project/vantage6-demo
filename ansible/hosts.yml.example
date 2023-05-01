@@ -1,0 +1,14 @@
+all:
+  vars:
+    v6_server: https://petronas.vantage6.ai/
+  hosts:
+    demoa:
+      name: demoA
+      api_key: XXXX
+    demob:
+      name: demoB
+      api_key: XXXX
+    democ:
+      name: demoC
+      api_key: XXXX
+
