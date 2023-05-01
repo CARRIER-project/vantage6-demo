@@ -93,7 +93,7 @@ function MakeComputationRequest(token) {
                 'master': true,
                 'output_format': 'json',
                 'args': [
-                    [13, 14], //the node IDs
+                    OTHER_ORGANIZATIONS, //the node IDs
                     requirements  // range data
                 ]
             })
