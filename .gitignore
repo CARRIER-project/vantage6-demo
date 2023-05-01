@@ -108,3 +108,5 @@ venv.bak/
 UI/static/config.js
 
 *.ipynb
+
+ansible/hosts.yml
