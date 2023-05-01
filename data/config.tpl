@@ -11,7 +11,8 @@ application:
 
 
   # subnet of the VPN server
-  vpn_subnet: 10.76.0.0/16
+  vpn_subnet: 10.155.40.0/24
+
 
   api_path: "/api"
 
