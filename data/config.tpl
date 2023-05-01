@@ -49,7 +49,7 @@ application:
   # the allowed_images key. This is expected to be a valid regular
   # expression
   allowed_images:
-    - ^harbor2.vantage6.ai/demo/[a-zA-Z]+
+    - ^harbor.carrier-mu.src.surf-hosted.nl/carrier/[a-zA-Z]+
 
   # Settings for the logger
   logging:
